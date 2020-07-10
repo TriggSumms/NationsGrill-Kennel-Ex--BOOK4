@@ -1,0 +1,54 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Kid Rockz",
+      "breed": "Small Dog",
+      "picture": "kidRock.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Rick and Debbie Brangle",
+      "breed": "2 Meatball Sized Dogs",
+      "picture": "weird.jpg"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Hell yuh Nations Bar",
+      "address": "The Nations, West Nashville",
+      "picture": "download.png"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Lil Scruf",
+      "position": "Bartender",
+      "picture": "download.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Montucky WildBoi with the busboi specialz",
+      "position": "BusBois.. with occasional server role",
+      "picture": "montuckybois.jpg"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Cowpoke Larz",
+      "position": "Assistant Manager",
+      "quote": "Its a done deal chief!",
+      "picture": "Larz.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Lil Big Teddy",
+      "position": "The Owner",
+      "quote": "Scrape the tables at the end of the night...the result will be a 'House Sauce' that will keep ya in buisness for the rest ya dang life",
+      "picture": "LilBigTed.jpg"
+    }
+  ]
+}

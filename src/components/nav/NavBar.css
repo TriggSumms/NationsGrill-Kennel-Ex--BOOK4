@@ -1,0 +1,44 @@
+small {
+    font-size: 75%;
+  }
+  
+  header {
+    /* background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fvintageprintable.swivelchairmedia.com%2Fwp-content%2Fuploads%2F2011%2F05%2FAnimal-Animal-acting-human-Dogs-playing-cards-940x198.jpg&f=1&nofb=1") ;  */
+    background-color: rgb(3, 0, 206);
+    background-size: 100%;
+    border: cornflowerblue solid 3px;
+  }
+  
+  .site-title {
+    color: rgb(247, 247, 247);
+    font-size: 40px;
+    text-align: center;
+    /* text-shadow:5px 2px cornflowerblue; */
+  }
+  
+  nav .container {
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  nav .container li {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: cornsilk;
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+    list-style-type: none;
+  }
+  
+  .nav-link {
+    color: cornsilk;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: maroon;
+  }
