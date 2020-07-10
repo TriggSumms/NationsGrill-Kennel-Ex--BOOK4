@@ -13,6 +13,15 @@ export default {
       method: "DELETE"
     }).then(result => result.json())
   },
+  postAnimal(newAnimal) {
+    return fetch(`${remoteURL}/animals`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newAnimal)
+    }).then(data => data.json())
+  },
   // LOCATION 
   getLocation(id) {
     return fetch(`${remoteURL}/locations/${id}`).then(result => result.json())
