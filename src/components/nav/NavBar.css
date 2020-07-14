@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+
+small {
+    font-size: 35%;
+    font-family: 'Rock Salt', cursive; 
+  }
+  
+  header {
+    background-color: transparent;
+     /* background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.clipartlogo.com%2Ffiles%2Fistock%2Fpreviews%2F8388%2F83881319-shiny-sun-lights-summer-banner-background.jpg&f=1&nofb=1) ;   */
+    /* background-color: rgb(3, 0, 206); */
+    background-size: 100%;
+    font-family: 'Fontdiner Swanky', cursive;
+    border-radius: 10%;
+    /* border: cornflowerblue solid 3px; */
+
+  }
+  
+  .site-title {
+    color: rgb(247, 247, 247);
+    font-size: 48px;
+    text-align: center;
+    text-shadow:4px 2px cornflowerblue; 
+    font-family: 'Fontdiner Swanky', cursive;
+    
+
+  }
+  
+  nav .container {
+    display: flex;
+    padding: 0;
+    
+  }
+  
+  nav .container li {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: cornsilk;
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+    opacity: 95%;
+    list-style-type: none;
+    border-radius: 50%;
+  }
+  
+  .nav-link {
+    color: cornsilk;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: maroon;
+  }

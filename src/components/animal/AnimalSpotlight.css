@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+.animal-spotlight {  
+    max-width: auto;
+    max-height: auto;
+   
+    
+  }
+  
+  .animal-spotlight img {
+    width: 200px;
+    
+  }
+  
+  .animal-spotlight p {
+    color: black;
+    font-family: 'Rock Salt', cursive;
+    font-size: 15px;
+  }
