@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "kid Rockz",
-      "breed": "Small Dog",
+      "nickName": "Small Dog",
       "picture": "kidRock.jpg"
     },
     {
       "id": 2,
       "name": "Rick and Debbie Brangle",
-      "breed": "2 Meatball Sized Dogs",
+      "nickName": "2 Meatball Sized Dogs",
       "picture": "weird.jpg"
     }
   ],
@@ -33,6 +33,18 @@
       "name": "Montucky WildBoi with the busboi specialz",
       "position": "BusBois.. with occasional server role",
       "picture": "montuckybois.jpg"
+    },
+    {
+      "name": "Samuel TRIGG Summs",
+      "position": "YEEEHA BOI",
+      "picture": "downloadofsmiles.jpg",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Lil Richards boi",
+      "position": "man boi the second",
+      "picture": "downloadofsmiles.jpg"
     }
   ],
   "owners": [

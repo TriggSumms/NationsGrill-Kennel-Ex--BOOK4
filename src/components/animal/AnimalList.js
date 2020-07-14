@@ -36,15 +36,16 @@ const AnimalList = (props) => {
 <section className="section-content">
   <button type="button"
       className="btn"
-      onClick={() => {props.history.push("/animal/new")}}>
-      Admit Animal
+      onClick={() => {props.history.push("/animals/new")}}>
+      Add a Bar Local
   </button>
   </section>
     <div className="container-cards">
       {animals.map(animal => 
       <AnimalCard key={animal.id} 
                   animal={animal} 
-                  deleteAnimals={deleteAnimals} />)}
+                  deleteAnimals={deleteAnimals}
+                  {...props} />)}
     </div>
   </>
   );

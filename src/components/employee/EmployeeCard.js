@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import {firstLetterCase} from '../../modules/helpers'
 import "./Employee.css";
 
 const EmployeeCard = props => {
@@ -6,13 +8,17 @@ const EmployeeCard = props => {
         <div className="card">
             <div className="card-content">
                 <picture>
-                <img src={require(`./${props.employee.picture}`)} alt="My Employee" />
+                {/* <img src={require(`./${props.employee.picture}`)} alt="My Employee" /> */}
                 </picture>
                 <h4>
-                Employee Name : <span className="card-employeeName">{props.employee.name}</span>
+                Employee Name : <span className="card-employeeName">{firstLetterCase(props.employee.name)}</span>
                 </h4>
-                <p><strong>{props.employee.position}</strong></p>
-                <button type="button" onClick={() => props.deleteEmployees(props.employee.id)}>Fire EM!</button>
+                <p><strong>Nation's Team Position:</strong>{props.employee.position}</p>
+                {/* <button type="button" onClick={() => props.deleteEmployees(props.employee.id)}>Fire EM!</button> */}
+                <Link to={`/employees/${props.employee.id}`}><button>Lets take a closer look!</button></Link>
+                <button type="button" onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}>
+                Edit the Employee
+                </button>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ const LocationCard = props => {
                     Location Name: <span className="card-locationName"> {props.location.name}</span>
                 </h4>
                 <p><strong>Nashville Neightborhood:</strong>{props.location.address}</p>
-                <button type="button" onClick={() => props.deleteLocations(props.location.id)}>Get rid of the location</button>
+                {/* <button type="button" onClick={() => props.deleteLocations(props.location.id)}>Get rid of the location</button> */}
                 <Link to={`/location/${props.location.id}`}><button>Lets take a closer look!</button></Link>
             </div>
         </div>

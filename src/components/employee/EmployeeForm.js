@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import Manager from '../../modules/Manager';
-import './AnimalForm.css'
+import './EmployeeForm.css'
 
-const AnimalForm = props => {
-  const [animal, setAnimal] = useState({ name: "", nickName: "", picture: ""});
+const EmployeeForm = props => {
+  const [employee, setEmployee] = useState({ name: "", position: "", picture: ""});
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
-    const stateToChange = { ...animal, picture:"coming soon.png" };
+    const stateToChange = { ...employee, picture:"downloadofsmiles.jpg"};
     //Added a default image for testing
     stateToChange[evt.target.id] = evt.target.value;
-    setAnimal(stateToChange);
+    setEmployee(stateToChange);
   };
 
   /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
   */
- const constructNewAnimal = evt => {
+ const constructNewEmployee = evt => {
   evt.preventDefault();
-  if (animal.name === "" || animal.nickName === "" || animal.picture === ""  ) {
+  if (employee.name === "" || employee.position === "" || employee.picture === ""  ) {
      
-    window.alert("Please input an frequenter name and nick-name");
+    window.alert("Please input all the info on your employee");
   } else {
     setIsLoading(true);
     // Create the animal and redirect user to animal list
-    Manager.postAnimal(animal)
-      .then(() => props.history.push("/animals"));
+    Manager.postEmployee(employee)
+      .then(() => props.history.push("/employees"));
   }
 };
 
@@ -38,17 +38,17 @@ const AnimalForm = props => {
               required
               onChange={handleFieldChange}
               id="name"
-              placeholder="Frequenter Name..."
+              placeholder="Employee name"
             />
             <label htmlFor="name">Name</label>
             <input
               type="text"
               required
               onChange={handleFieldChange}
-              id="nickName"
-              placeholder="Nick Name...?"
+              id="position"
+              placeholder="Position"
             />
-            <label htmlFor="breed">Breed</label>
+            <label htmlFor="position">Position</label>
             <input
               type="text"
               required
@@ -62,7 +62,7 @@ const AnimalForm = props => {
             <button
               type="button"
               disabled={isLoading}
-              onClick={constructNewAnimal}
+              onClick={constructNewEmployee}
             >Submit</button>
           </div>
         </fieldset>
@@ -71,4 +71,4 @@ const AnimalForm = props => {
   );
 };
 
-export default AnimalForm
+export default EmployeeForm

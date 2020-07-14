@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
+
 const NavBar = () => {
     return (
         <header>
             <h1 className="site-title">
-                Student Kennels
+                The Nation's Bar and Grill
         <br />
-                <small>~Loving care when you're not there~</small>
+                <small>~Visit the Crew at our West Nasty Location~</small>
             </h1>
             <nav>
                 <ul className="container">
@@ -18,8 +19,8 @@ const NavBar = () => {
             </Link>
                     </li>;
                     <li>
-            <Link className="nav-link" to="/animal">
-                            Animals
+            <Link className="nav-link" to="/animals">
+                            Famous Locals
             </Link>
                     </li>;
           <li>
@@ -28,7 +29,7 @@ const NavBar = () => {
             </Link>
                     </li>;
           <li>
-             <Link className="nav-link" to="/employee">
+             <Link className="nav-link" to="/employees">
                             Employees
             </Link>
                     </li>;

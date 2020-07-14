@@ -13,6 +13,7 @@ export default {
       method: "DELETE"
     }).then(result => result.json())
   },
+  //The two Fetch calls bellow (ANIMALS) work as a pair to edit/populate a form and then put the info onto the API for later rendering 
   postAnimal(newAnimal) {
     return fetch(`${remoteURL}/animals`, {
       method: "POST",
@@ -22,6 +23,16 @@ export default {
       body: JSON.stringify(newAnimal)
     }).then(data => data.json())
   },
+  updateAnimal(editedAnimal) {
+    return fetch(`${remoteURL}/animals/${editedAnimal.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedAnimal)
+    }).then(data => data.json());
+  },
+
   // LOCATION 
   getLocation(id) {
     return fetch(`${remoteURL}/locations/${id}`).then(result => result.json())
@@ -34,6 +45,7 @@ export default {
       method: "DELETE"
     }).then(result => result.json())
   },
+
   //EMPLOYEE
   getEmployee(id) {
     return fetch(`${remoteURL}/employees/${id}`).then(result => result.json())
@@ -46,6 +58,25 @@ export default {
       method: "DELETE"
     }).then(result => result.json())
   },
+  postEmployee(newEmployee) {
+    return fetch(`${remoteURL}/employees`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newEmployee)
+    }).then(data => data.json())
+  },
+  updateEmployee(editedEmployee) {
+    return fetch(`${remoteURL}/employees/${editedEmployee.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedEmployee)
+    }).then(data => data.json());
+  },
+
   //OWNER
   getOwner(id) {
     return fetch(`${remoteURL}/owners/${id}`).then(result => result.json())

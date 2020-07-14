@@ -1,16 +1,19 @@
 import React from "react";
+import "./home.css";
 
 const Home = () => {
     return (
-        <address>
-            Visit the Crew at our West Nasty Location
+        <address className="address__container">
+            
             <br />
-            <strong>Address:</strong> 705 51st Ave N, Nashville, TN 37209
+            <h1 className ="fact__collection">
+            <strong className="fact__collectionEnhanced">Address:</strong> 705 51st Ave N, Nashville, TN 37209
             <br />
-            <strong>Phone:</strong> +1 615 873 4755
+            <strong className="fact__collectionEnhanced">Phone:</strong> +1 615 873 4755
             <br />
-            <strong>Hours:</strong> Open · Closes 2AM
+            <strong className="fact__collectionEnhanced">Hours:</strong> Open · Closes 2AM
 Hours may not reflect changes made due to Covid-19
+            </h1>
         </address>
     );
 };

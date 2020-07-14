@@ -15,7 +15,7 @@ const LocationDetail = props => {
           address: location.address,
           picture: location.picture
         });
-        setIsLoading(true);
+        setIsLoading(false);
       });
   }, [props.locationId]);
 

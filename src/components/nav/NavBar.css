@@ -1,19 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+
 small {
-    font-size: 75%;
+    font-size: 35%;
+    font-family: 'Rock Salt', cursive; 
   }
   
   header {
     /* background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fvintageprintable.swivelchairmedia.com%2Fwp-content%2Fuploads%2F2011%2F05%2FAnimal-Animal-acting-human-Dogs-playing-cards-940x198.jpg&f=1&nofb=1") ;  */
     background-color: rgb(3, 0, 206);
     background-size: 100%;
+    font-family: 'Fontdiner Swanky', cursive;
     border: cornflowerblue solid 3px;
+
   }
   
   .site-title {
     color: rgb(247, 247, 247);
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
     /* text-shadow:5px 2px cornflowerblue; */
+    font-family: 'Fontdiner Swanky', cursive;
+
   }
   
   nav .container {
