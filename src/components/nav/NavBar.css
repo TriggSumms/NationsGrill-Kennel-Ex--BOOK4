@@ -9,27 +9,30 @@ small {
   }
   
   header {
-    /* background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fvintageprintable.swivelchairmedia.com%2Fwp-content%2Fuploads%2F2011%2F05%2FAnimal-Animal-acting-human-Dogs-playing-cards-940x198.jpg&f=1&nofb=1") ;  */
-    background-color: rgb(3, 0, 206);
+    background-color: transparent;
+     /* background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.clipartlogo.com%2Ffiles%2Fistock%2Fpreviews%2F8388%2F83881319-shiny-sun-lights-summer-banner-background.jpg&f=1&nofb=1) ;   */
+    /* background-color: rgb(3, 0, 206); */
     background-size: 100%;
     font-family: 'Fontdiner Swanky', cursive;
-    border: cornflowerblue solid 3px;
+    border-radius: 10%;
+    /* border: cornflowerblue solid 3px; */
 
   }
   
   .site-title {
     color: rgb(247, 247, 247);
-    font-size: 45px;
+    font-size: 48px;
     text-align: center;
-    /* text-shadow:5px 2px cornflowerblue; */
+    text-shadow:4px 2px cornflowerblue; 
     font-family: 'Fontdiner Swanky', cursive;
+    
 
   }
   
   nav .container {
     display: flex;
     padding: 0;
-    margin-bottom: 0;
+    
   }
   
   nav .container li {
@@ -40,7 +43,9 @@ small {
     color: cornsilk;
     box-sizing: border-box;
     background-color: cornflowerblue;
+    opacity: 95%;
     list-style-type: none;
+    border-radius: 50%;
   }
   
   .nav-link {

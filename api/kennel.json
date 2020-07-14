@@ -4,13 +4,35 @@
       "id": 1,
       "name": "kid Rockz",
       "nickName": "Small Dog",
-      "picture": "kidRock.jpg"
+      "picture": "kidRock.jpg",
+      "employeeId": 2
     },
     {
       "id": 2,
       "name": "Rick and Debbie Brangle",
       "nickName": "2 Meatball Sized Dogs",
-      "picture": "weird.jpg"
+      "picture": "weird.jpg",
+      "employeeId": 2
+    },
+    {
+      "id": 3,
+      "name": "Ricky Senior",
+      "nickName": "Jr.",
+      "picture": "coming soon.png",
+      "employeeId": 3
+    },
+    {
+      "id": 5,
+      "name": "Catfish Mane",
+      "nickName": "whiskers",
+      "picture": "coming soon.png",
+      "employeeId": 4
+    },
+    {
+      "name": "Rick Spring",
+      "nickName": "Beautiful Bad boi",
+      "picture": "coming soon.png",
+      "id": 6
     }
   ],
   "locations": [
@@ -24,7 +46,7 @@
   "employees": [
     {
       "id": 1,
-      "name": "Lil Scruf",
+      "name": "Lil Scrufz",
       "position": "Bartender",
       "picture": "download.jpg"
     },
@@ -35,15 +57,15 @@
       "picture": "montuckybois.jpg"
     },
     {
+      "id": 3,
       "name": "Samuel TRIGG Summs",
-      "position": "YEEEHA BOI",
-      "picture": "downloadofsmiles.jpg",
-      "id": 3
+      "position": "YEEEHA BOIfdfdfd",
+      "picture": "downloadofsmiles.jpg"
     },
     {
       "id": 4,
       "name": "Lil Richards boi",
-      "position": "man boi the second",
+      "position": "man boi the third",
       "picture": "downloadofsmiles.jpg"
     }
   ],

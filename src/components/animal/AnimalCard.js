@@ -12,15 +12,12 @@ const AnimalCard = (props) => {
         </picture>
         {/* maybe change the alt to display the .name */}
         <h3>
-          Frequenter Name: <span className="card-dogname">{firstLetterCase(props.animal.name)}</span>
-        </h3>
-        <p><strong>Nick Name:</strong> {props.animal.nickName}</p>
-        {/* <button type="button" onClick={() => props.deleteAnimals(props.animal.id)}>
-        Get rid of that BadBabi
-        </button> */}
-       <button type="button" onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>
-          ~Edit the Profile~
-        </button> 
+          Frequenter Name: <span className="card-dogname"></span></h3>
+          <p>{firstLetterCase(props.animal.name)}</p>
+        
+        <h3><strong>Nick Name:</strong></h3> <p className="frequenter__Signature">{props.animal.nickName}</p>
+        {/* <button type="button" onClick={() => props.deleteAnimals(props.animal.id)}>Get rid of that BadBabi</button> */}
+       <button type="button" onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>~Edit the Profile~</button> 
         <Link to={`/animals/${props.animal.id}`}><button>Lets take a closer look!</button></Link>
       </div>
     </div>

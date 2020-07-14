@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Manager from '../../modules/Manager';
 import './AnimalDetail.css'
+import EmployeeWithAnimals from '../employee/EmployeeWithAnimals'
 
 const AnimalDetail = props => {
-  const [animal, setAnimal] = useState({ name: "", nickName: "", picture: ""});
+  const [animal, setAnimal] = useState({ name: "", nickName: "", picture: "", employeeId: ""});
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -11,10 +12,12 @@ const AnimalDetail = props => {
     Manager.getAnimal(props.animalId)
       .then(animal => {
         setAnimal({
+          id: props.match.params.animalId,
           name: animal.name,
           nickName: animal.nickName,
-          picture: animal.picture
-        });
+          picture: animal.picture,
+          employeeId: parseInt(animal.employeeId)
+        })
         setIsLoading(false);
       });
   }, [props.animalId]);
@@ -47,15 +50,16 @@ const AnimalDetail = props => {
         </picture>
         <h3>Frequenter Name: <span style={{ color: 'darkslategrey' }}>{animal.name}</span></h3>
         <p>nickName: {animal.nickName}</p>
+        <p>Employee Responsible: {animal.employeeId}</p>
         <button type="button" disabled={isLoading} onClick={handleDelete}>
           Get rid of this bad boi...4realtho.
         </button>
         {/* <button type="button" disabled={isLoading} onClick={handleEdit}>
           ~Edit the Profile~
         </button> */}
-        <button type="button" onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>
+        {/* <button type="button" onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>
           ~Edit the Profile~
-        </button> 
+        </button>  */}
       </div>
     </div>
   );

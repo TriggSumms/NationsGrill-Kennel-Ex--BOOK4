@@ -1,6 +1,7 @@
 import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
+import Menu from "./Menu/menu";
 import AnimalList from "./animal/AnimalList";
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
@@ -13,6 +14,7 @@ import EmployeeForm from "./employee/EmployeeForm";
 import Login from "./auth/Login";
 import AnimalEditForm from "./animal/AnimalEditForm"
 import EmployeeEditForm from "./employee/EmployeeEditForm"
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals"
 
 // Should I add props into the function below?
 //Question: Differences between targetting session/local storage for this project?
@@ -62,7 +64,14 @@ const ApplicationViews = () => {
                     return <Redirect to="/login" />
                 }
             }} />
-
+            {/* NAV BAR Menu----------------------------------------------------------------------------------*/}
+            <Route
+                exact
+                path="/Menu"
+                render={(props) => {
+                    return <Menu />;
+                }}
+            />
 
             {/* NAV BAR LOCATION----------------------------------------------------------------------------------*/}
 
@@ -112,6 +121,9 @@ const ApplicationViews = () => {
                 } else {
                     return <Redirect to="/login" />
                 }
+            }} />
+            <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
+                return <EmployeeWithAnimals {...props} />
             }} />
 
 

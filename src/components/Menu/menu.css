@@ -1,0 +1,16 @@
+html{
+    /* background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic1.squarespace.com%2Fstatic%2F57e2ae81e58c62c9e2af7c10%2Ft%2F5859933644024358eb47b196%2F1482265398947%2FFiftyFirst-Nathionsrestaurants-162.jpg&f=1&nofb=1); */
+    background-size: stretch; 
+    opacity: 100%;
+
+}
+.menu__collection{ 
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* This needs to be remembered */
+    text-align: center;
+    background-color: rgba(255,255,255, .75);
+    color: inherit;
+
+}

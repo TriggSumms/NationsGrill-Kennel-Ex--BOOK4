@@ -32,6 +32,15 @@ export default {
       body: JSON.stringify(editedAnimal)
     }).then(data => data.json());
   },
+  getRandomAnimalId() {
+    return fetch(`${remoteURL}/animals`)
+      .then(result => result.json())
+      .then(animals => {
+        const randomIndex = Math.floor(Math.random() * animals.length);
+        const randomAnimal = animals[randomIndex];
+        return randomAnimal.id;
+    });
+  },
 
   // LOCATION 
   getLocation(id) {
@@ -53,6 +62,10 @@ export default {
   getEmployeeAll() {
     return fetch(`${remoteURL}/employees`).then(result => result.json())
   },
+  getWithAnimals(id) {
+    return fetch(`${remoteURL}/employees/${id}?_embed=animals`)
+            .then(result => result.json())
+},
   deleteEmployee(id) {
     return fetch(`${remoteURL}/employees/${id}`, {
       method: "DELETE"

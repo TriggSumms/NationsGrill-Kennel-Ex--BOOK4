@@ -3,8 +3,9 @@ import Manager from "../../modules/Manager"
 import "./AnimalForm.css"
 
 const AnimalEditForm = props => {
-  const [animal, setAnimal] = useState({ name: "", nickName: "" });
+  const [animal, setAnimal] = useState({ name: "", nickName: "", employeeId: ""});
   const [isLoading, setIsLoading] = useState(false);
+  const[employees, setEmployees] = useState([]);
 
   const handleFieldChange = evt => {
     const stateToChange = { ...animal };
@@ -21,20 +22,26 @@ const AnimalEditForm = props => {
       id: props.match.params.animalId,
       name: animal.name,
       nickName: animal.nickName,
-      picture: animal.picture
+      picture: animal.picture,
+      employeeId: parseInt(animal.employeeId)
     };
 
     Manager.updateAnimal(editedAnimal)
       .then(() => props.history.push("/animals"))
   }
-
+//Edited this process to pull and tie Employees with Animals...and a select drop down
   useEffect(() => {
     Manager.getAnimal(props.match.params.animalId)
       .then(animal => {
-        setAnimal(animal);
-        setIsLoading(false);
+        Manager.getEmployeeAll().then(employees =>{
+          setEmployees(employees)
+          setAnimal(animal);
+           setIsLoading(false);
+        })
+        
+        
       });
-  }, []);
+  }, [props.match.params.animalId]);
 
   return (
     <>
@@ -61,6 +68,19 @@ const AnimalEditForm = props => {
             />
             <label htmlFor="nickName">Bar nickName</label>
           </div>
+          <select
+            className="form-control"
+            id="employeeId"
+            value={animal.employeeId}
+            onChange={handleFieldChange}
+          >
+            {employees.map(employee =>
+              <option key={employee.id} value={employee.id}>
+                {employee.name}
+              </option>
+            )}
+          </select>
+          <label htmlFor="employeeId">Employee</label>
           <div className="alignRight">
             <button
               type="button" disabled={isLoading}

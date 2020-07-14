@@ -12,7 +12,7 @@ const EmployeeDetails = props => {
       .then(employee => {
         setEmployee({
           name: employee.name,
-          breed: employee.position,
+          position: employee.position,
           picture: employee.picture
         });
         setIsLoading(false);
@@ -35,7 +35,7 @@ const EmployeeDetails = props => {
          {employee.picture === "" ? undefined : <img src={require(`./${employee.picture}`)} alt="My employee" />}
         </picture>
         <h3>Name: <span style={{ color: 'darkslategrey' }}>{employee.name}</span></h3>
-        <p>Position: {employee.position}</p>
+        <h3>Position: </h3><p>{employee.position}</p>
         <button type="button" disabled={isLoading} onClick={handleDelete}>
           Time to get rid of this guy, he stole freezer cheeses AGAIN!
         </button>

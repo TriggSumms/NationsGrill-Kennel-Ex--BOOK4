@@ -48,7 +48,7 @@ const AnimalForm = props => {
               id="nickName"
               placeholder="Nick Name...?"
             />
-            <label htmlFor="breed">Breed</label>
+            <label htmlFor="nickName">Nick Name</label>
             <input
               type="text"
               required

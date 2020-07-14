@@ -11,7 +11,7 @@ const EmployeeCard = props => {
                 {/* <img src={require(`./${props.employee.picture}`)} alt="My Employee" /> */}
                 </picture>
                 <h4>
-                Employee Name : <span className="card-employeeName">{firstLetterCase(props.employee.name)}</span>
+                Name : <span className="card-employeeName">{firstLetterCase(props.employee.name)}</span>
                 </h4>
                 <p><strong>Nation's Team Position:</strong>{props.employee.position}</p>
                 {/* <button type="button" onClick={() => props.deleteEmployees(props.employee.id)}>Fire EM!</button> */}
@@ -19,6 +19,8 @@ const EmployeeCard = props => {
                 <button type="button" onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}>
                 Edit the Employee
                 </button>
+                <button type="button"
+        onClick={() => { props.history.push(`/employees/${props.employee.id}/details`) }}>Employee Task(s)</button>
             </div>
         </div>
     )
