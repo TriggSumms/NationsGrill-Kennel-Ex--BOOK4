@@ -14,6 +14,7 @@ const AnimalEditForm = props => {
   };
 
   const updateExistingAnimal = evt => {
+    //Stops the pg from loading on every click...
     evt.preventDefault()
     setIsLoading(true);
 
@@ -42,6 +43,8 @@ const AnimalEditForm = props => {
         
       });
   }, [props.match.params.animalId]);
+//Filling the dependency array allows the change made to rerender the Animal
+
 
   return (
     <>
@@ -74,13 +77,14 @@ const AnimalEditForm = props => {
             value={animal.employeeId}
             onChange={handleFieldChange}
           >
+            {/* will display all of the employees in the current array */}
             {employees.map(employee =>
               <option key={employee.id} value={employee.id}>
                 {employee.name}
               </option>
             )}
           </select>
-          <label htmlFor="employeeId">Employee</label>
+          <label htmlFor="employeeId">Employee to be assigned to</label>
           <div className="alignRight">
             <button
               type="button" disabled={isLoading}

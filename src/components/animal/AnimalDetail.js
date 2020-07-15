@@ -3,9 +3,12 @@ import Manager from '../../modules/Manager';
 import './AnimalDetail.css'
 import EmployeeWithAnimals from '../employee/EmployeeWithAnimals'
 
+
+//User clicks details button thus rendering the animals info
 const AnimalDetail = props => {
   const [animal, setAnimal] = useState({ name: "", nickName: "", picture: "", employeeId: ""});
   const [isLoading, setIsLoading] = useState(true);
+//Is loading is used to make sure the component is in a state (not loaded?)
 
   useEffect(() => {
     //get(id) from Manager and hang on to the data; put it into state
@@ -46,7 +49,7 @@ const AnimalDetail = props => {
       <div className="card-content">
         <picture>
             {/* This is diffcult to understand, but an if/else statement is needed in order to run the pictures reference? */}
-         {animal.picture === "" ? undefined : <img src={require(`./${animal.picture}`)} alt="My Doggie" />}
+         {animal.picture === "" ? undefined : <img src={require(`./${animal.picture}`)} alt={animal.name} />}
         </picture>
         <h3>Frequenter Name: <span style={{ color: 'darkslategrey' }}>{animal.name}</span></h3>
         <p>nickName: {animal.nickName}</p>

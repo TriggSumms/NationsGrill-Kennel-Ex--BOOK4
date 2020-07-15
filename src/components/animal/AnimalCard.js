@@ -8,20 +8,19 @@ const AnimalCard = (props) => {
     <div className="card">
       <div className="card-content">
         <picture>
-            {/* <img src={require(`./${props.animal.picture}`)} alt="My Doggie" />  */}
+            <img src={require(`./${props.animal.picture}`)} alt={props.animal.name} />
         </picture>
         {/* maybe change the alt to display the .name */}
-        <h3>
-          Frequenter Name: <span className="card-dogname"></span></h3>
+        <h3>Frequenter Name: <span className="card-dogname"></span></h3>
           <p>{firstLetterCase(props.animal.name)}</p>
         
         <h3><strong>Nick Name:</strong></h3> <p className="frequenter__Signature">{props.animal.nickName}</p>
+        <Link to={`/animals/${props.animal.id}`}><button>Lets take a closer look!</button></Link>
         {/* <button type="button" onClick={() => props.deleteAnimals(props.animal.id)}>Get rid of that BadBabi</button> */}
        <button type="button" onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>~Edit the Profile~</button> 
-        <Link to={`/animals/${props.animal.id}`}><button>Lets take a closer look!</button></Link>
       </div>
     </div>
   )
-}
+};
 
 export default AnimalCard;

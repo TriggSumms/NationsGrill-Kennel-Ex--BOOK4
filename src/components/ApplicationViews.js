@@ -75,20 +75,19 @@ const ApplicationViews = () => {
 
             {/* NAV BAR LOCATION----------------------------------------------------------------------------------*/}
 
-            <Route
-                exact path="/location"
-                render={props => {
-                    if (isAuthenticated()) {
-                        return <LocationList {...props} />
-                    } else {
-                        return <Redirect to="/login" />
-                    }
+            <Route exact path="/location" render={(props) => {
+                    return <LocationList {...props}/>
                 }}
             />
-            <Route path="/location/:locationId(\d+)" render={(props) => {
-                return <LocationDetail
-                    locationId={parseInt(props.match.params.locationId)}
-                    {...props} />
+            <Route path="/location/:locationId(\d+)" render={(props) =>{
+                if (isAuthenticated()) {
+                    return <LocationDetail
+                        locationId={parseInt(props.match.params.locationId)}
+                        {...props} />
+                } else {
+                    return <Redirect to="/login" />
+
+                }
             }}
             />
 

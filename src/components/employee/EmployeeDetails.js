@@ -11,9 +11,11 @@ const EmployeeDetails = props => {
     Manager.getEmployee(props.employeeId)
       .then(employee => {
         setEmployee({
+          id: props.match.params.employeeId,
           name: employee.name,
           position: employee.position,
           picture: employee.picture
+          
         });
         setIsLoading(false);
       });
@@ -32,7 +34,7 @@ const EmployeeDetails = props => {
       <div className="card-content">
         <picture>
             {/* This is diffcult to understand, but an if/else statement is needed in order to run the pictures reference? */}
-         {employee.picture === "" ? undefined : <img src={require(`./${employee.picture}`)} alt="My employee" />}
+         {employee.picture === "" ? undefined : <img src={require(`./${employee.picture}`)} alt={employee.name} />}
         </picture>
         <h3>Name: <span style={{ color: 'darkslategrey' }}>{employee.name}</span></h3>
         <h3>Position: </h3><p>{employee.position}</p>

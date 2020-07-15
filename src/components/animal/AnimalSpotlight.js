@@ -18,7 +18,7 @@ const AnimalSpotlight = props => {
   return (
     //   Parent container
     <div className="animal-spotlight">
-      <img src={require('./kidRock.jpg')} alt="My Dog" />
+      {animal.picture === "" ? undefined : <img src={require(`./${animal.picture}`)} alt={animal.name} />}
       <div>
           {/* //Child Container */}
         <h3>{animal.name}</h3>

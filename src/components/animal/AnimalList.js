@@ -19,10 +19,13 @@ const AnimalList = (props) => {
   useEffect(() => {
     getAnimals();
   }, []);
-  // Delete Functionality, due to my Manager.js....naming conventions were changed 
+
+  // Delete Functionality, may need to change to pass through the get animalsfromAPI?
   const deleteAnimals = id => {
     Manager.deleteAnimal(id)
-      .then(() => Manager.getAnimalAll().then(setAnimals));
+      .then(() => {
+        Manager.getAnimalAll().then(setAnimals)});
+
   };
 
 

@@ -15,24 +15,24 @@
       "employeeId": 2
     },
     {
-      "id": 3,
-      "name": "Ricky Senior",
-      "nickName": "Jr.",
-      "picture": "coming soon.png",
-      "employeeId": 3
-    },
-    {
       "id": 5,
       "name": "Catfish Mane",
       "nickName": "whiskers",
       "picture": "coming soon.png",
-      "employeeId": 4
+      "employeeId": 2
     },
     {
       "name": "Rick Spring",
       "nickName": "Beautiful Bad boi",
       "picture": "coming soon.png",
       "id": 6
+    },
+    {
+      "id": 8,
+      "name": "ST",
+      "nickName": "lil man",
+      "picture": "coming soon.png",
+      "employeeId": 4
     }
   ],
   "locations": [
@@ -55,12 +55,6 @@
       "name": "Montucky WildBoi with the busboi specialz",
       "position": "BusBois.. with occasional server role",
       "picture": "montuckybois.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Samuel TRIGG Summs",
-      "position": "YEEEHA BOIfdfdfd",
-      "picture": "downloadofsmiles.jpg"
     },
     {
       "id": 4,

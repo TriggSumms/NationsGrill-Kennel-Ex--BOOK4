@@ -15,6 +15,11 @@ const EmployeeWithAnimals = props => {
       });
   }, []);
 
+/*   const deleteAnimals = id => {
+    Manager.deleteAnimal(id)
+      .then(() => Manager.getAnimalAll().then(setAnimals));
+  }; */
+
   return (
     <div className="card">
       <p> {employee.name}... has been asked to watch these locals this weekend:</p>

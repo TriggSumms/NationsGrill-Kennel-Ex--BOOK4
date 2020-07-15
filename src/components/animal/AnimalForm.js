@@ -8,10 +8,15 @@ const AnimalForm = props => {
 
   const handleFieldChange = evt => {
     const stateToChange = { ...animal, picture:"coming soon.png" };
-    //Added a default image for testing
+    //all animal objects in the state
     stateToChange[evt.target.id] = evt.target.value;
     setAnimal(stateToChange);
   };
+//Is the setAnimal preparing the object ready for change?
+
+
+
+
 
   /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
   */
@@ -49,14 +54,14 @@ const AnimalForm = props => {
               placeholder="Nick Name...?"
             />
             <label htmlFor="nickName">Nick Name</label>
-            <input
+{/*             <input
               type="text"
               required
               onChange={handleFieldChange}
               id="picture"
               placeholder="FEATURE IS CURRENTLY UNAVAILABLE"
             />
-            <label htmlFor="picture">Web sourced Picture:</label>
+            <label htmlFor="picture">Web sourced Picture:</label> */}
           </div>
           <div className="alignRight">
             <button
