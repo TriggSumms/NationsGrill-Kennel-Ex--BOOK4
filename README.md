@@ -1,3 +1,11 @@
+#Intial user experience:
+7/15/2020
+Currently (user1: Customer) can utilize the website to add/update the "Local Legends" pg, as well as look into menus/operational updates/details for the restaurant.
+...and then (user2: Management of the Nations Bar and Grill) can log in to make administrative choices for the website. Such as editing local legends, assigning employees tasks(babysitting localslegends), or just adding/editing current employees.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
