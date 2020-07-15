@@ -18,10 +18,13 @@ import EmployeeWithAnimals from "./employee/EmployeeWithAnimals"
 
 // Should I add props into the function below?
 //Question: Differences between targetting session/local storage for this project?
-const ApplicationViews = () => {
-    const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+const ApplicationViews = (props) => {
+    const hasUser = props.hasUser;
+    const setUser = props.setUser;
+    // const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
     return (
         <React.Fragment>
+
             {/*NAV BAR HOME/LOGIN ------------------------------------------------------------------------------  */}
             <Route
                 exact
@@ -31,18 +34,24 @@ const ApplicationViews = () => {
                 }}
             />
             {/* LOGIN ROUTE */}
-            <Route path="/login" component={Login} />
+            {/* <Route path="/login" component={Login} /> */}
+            {/* //pass the `setUser` function to Login component. */}
+            <Route path="/login" render={props => {
+                return <Login setUser={setUser} {...props} />
+            }} />
+
+
 
 
             {/*NAV BAR ANIMAL----------------------------------------------------------------------------------- */}
 
-            <Route exact path="/animals" render={props => {
+            <Route exact path="/animals" render={(props) => {
                 return <AnimalList {...props}
                 />
             }} />
             {/* This route has been adjusted to only allow the user to delete the profile.....if logged in */}
             <Route exact path="/animals/:animalId(\d+)" render={(props) => {
-                if (isAuthenticated()) {
+                if (hasUser) {
                     return <AnimalDetail
                         animalId={parseInt(props.match.params.animalId)}
                         {...props} />
@@ -58,12 +67,16 @@ const ApplicationViews = () => {
             />
             {/* This path was added for the editing of the card by a user */}
             <Route path="/animals/:animalId(\d+)/edit" render={props => {
-                if (isAuthenticated()) {
+                if (hasUser) {
                     return <AnimalEditForm {...props} />
                 } else {
                     return <Redirect to="/login" />
                 }
             }} />
+
+
+
+
             {/* NAV BAR Menu----------------------------------------------------------------------------------*/}
             <Route
                 exact
@@ -73,14 +86,15 @@ const ApplicationViews = () => {
                 }}
             />
 
+
             {/* NAV BAR LOCATION----------------------------------------------------------------------------------*/}
 
-            <Route exact path="/location" render={(props) => {
+            <Route exact path="/locations" render={(props) => {
                     return <LocationList {...props}/>
                 }}
             />
             <Route path="/location/:locationId(\d+)" render={(props) =>{
-                if (isAuthenticated()) {
+                if (hasUser) {
                     return <LocationDetail
                         locationId={parseInt(props.match.params.locationId)}
                         {...props} />
@@ -100,7 +114,7 @@ const ApplicationViews = () => {
             />
             {/* This route has been adjusted to only allow the user to delete the profile.....if logged in */}
             <Route exact path="/employees/:employeeId(\d+)" render={(props) => {
-                if (isAuthenticated()) {
+                if (hasUser) {
                     return <EmployeeDetail
                         employeeId={parseInt(props.match.params.employeeId)}
                         {...props} />
@@ -115,7 +129,7 @@ const ApplicationViews = () => {
             }} />
             {/* This path was added for the editing of the card by a user */}
             <Route path="/employees/:employeeId(\d+)/edit" render={props => {
-                if (isAuthenticated()) {
+                if (hasUser) {
                     return <EmployeeEditForm {...props} />
                 } else {
                     return <Redirect to="/login" />
@@ -126,11 +140,15 @@ const ApplicationViews = () => {
             }} />
 
 
+
+
+
+
             {/* NAV BAR OWNER-------------------------------------------------------------------------------------*/}
 
             <Route
-                path="/owner"
-                render={props => {
+                path="/owners"
+                render={(props) => {
                     return <OwnerList />;
                 }}
             />

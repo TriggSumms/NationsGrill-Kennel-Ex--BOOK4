@@ -54,14 +54,14 @@ const AnimalForm = props => {
               placeholder="Nick Name...?"
             />
             <label htmlFor="nickName">Nick Name</label>
-{/*             <input
+ {/*           <input
               type="text"
               required
               onChange={handleFieldChange}
               id="picture"
               placeholder="FEATURE IS CURRENTLY UNAVAILABLE"
             />
-            <label htmlFor="picture">Web sourced Picture:</label> */}
+            <label htmlFor="picture">Web sourced Picture:</label>  */}
           </div>
           <div className="alignRight">
             <button

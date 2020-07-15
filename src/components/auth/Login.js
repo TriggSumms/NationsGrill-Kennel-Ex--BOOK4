@@ -5,12 +5,14 @@ import React, { useState } from "react"
 //What is state and how do i update it?...This handles that and then matches the id with a value in state
 const Login = props => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [rememberMe, setRememberMe] = useState({checkbox: ""})
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
-    const stateToChange = { ...credentials };
+    const stateToChange = { ...credentials, ...rememberMe};
     stateToChange[evt.target.id] = evt.target.value;
     setCredentials(stateToChange);
+    setRememberMe(stateToChange);
   };
 
 
@@ -23,14 +25,34 @@ const Login = props => {
         the customer enters into session storage.
         ...Let's just trust the user... That's a good idea, right????
     */
-    sessionStorage.setItem(
+/*     sessionStorage.setItem(
       "credentials",
       JSON.stringify(credentials)
-    );
+    ); */
+    props.setUser(credentials);
+    props.setUser(rememberMe);
+
     //Changed the route to HOME NAV*
     props.history.push("/");
   }
 
+
+
+//CHECKBOX ATTEMPT FOR REMEMBERME
+/*   const handleLogin = (e) => {
+    e.preventDefault();
+    localStorage.setItem(
+      "rememberMe",
+      JSON.stringify(rememberMe)
+    ); 
+    props.setUser(rememberMe);
+    //Changed the route to HOME NAV*
+    props.history.push("/");
+  }
+ */
+
+
+ 
 
 //This is what will display after 
 
@@ -51,6 +73,11 @@ const Login = props => {
             placeholder="Password"
             required="" />
           <label htmlFor="inputPassword">Password</label>
+          <input onChange={handleFieldChange} type="checkbox"
+          id="checkbox"
+          placeholder="checkbox"
+          required="" />
+          <label htmlFor= "inputCheckbox">Remember Me</label>
         </div>
         <button type="submit">Sign in</button>
       </fieldset>
