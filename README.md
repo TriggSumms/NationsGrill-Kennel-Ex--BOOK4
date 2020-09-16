@@ -1,3 +1,5 @@
+# STUDENT-KENNEL-BOOK4
+
 User Experience Preface:
 7/15/2020
 Currently (user1: Customer) can utilize the website to add/update the "Local Legends" pg, as well as look into menus/operational updates/details for the restaurant.
@@ -74,4 +76,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# STUDENT-KENNEL-BOOK4
