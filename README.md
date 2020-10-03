@@ -9,7 +9,8 @@
 
 
 # STUDENT-KENNEL-BOOK4
-This is our classes first REACT APP project, in this example I deviated a little from the example subject matter!
+This is our classes first REACT APP project, in this practice run... I deviated a little from the example subject matter!
+
 
 Currently (user1: Customer) can utilize the website to add/update the "Local Legends" pg, as well as look into menus/operational updates/details for the restaurant.
 ...and then (user2: Management of the Nations Bar and Grill) can log in to make administrative choices for the website. Such as editing local legends, assigning employees tasks(babysitting localslegends), or just adding/editing current employees.
